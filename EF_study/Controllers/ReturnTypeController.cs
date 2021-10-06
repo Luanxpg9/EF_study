@@ -28,6 +28,31 @@ namespace EF_study.Controllers
         {
             return Created("example.org/myitem", new { name = "newItem" });
         }
+        /// <summary>
+        /// Returns a 204 status code, which is when there is no content.
+        /// </summary>
+        /// <returns></returns>
+        public IActionResult NoContentResult()
+        {
+            return NoContent();
+        }
+        /// <summary>
+        /// Returns a error 400. Indicates a bad request from the user.
+        /// </summary>
+        /// <returns></returns>
+        public IActionResult BadRequestResult()
+        {
+            return BadRequest();
+        }
+        /// <summary>
+        /// Returns a error 401.
+        /// </summary>
+        /// <returns></returns>
+        public IActionResult UnauthorizedResult()
+        {
+            return Unauthorized();
+        }
         #endregion
     }
 }
+ 
